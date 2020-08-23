@@ -29,9 +29,9 @@ optionalExpensesBtn.disabled = true;
 countBtn.disabled = true;
 
 startBtn.addEventListener('click', () => {
-    time = prompt('Введите дату в формате YYYY-MM-DD', '');
+    time = prompt('Введите дату в формате YYYY-MM-DD'.replace(/ /g, "-"), '');
     money = +prompt("Ваш бюджет на месяц?", '');
-
+    // console.log(time.replace(/ /g, "-"));
     while (isNaN(money) || money == '' || money == null) {
         money = prompt("Ваш бюджет?", "");
     }
